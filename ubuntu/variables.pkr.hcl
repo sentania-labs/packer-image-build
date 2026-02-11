@@ -1,6 +1,6 @@
 variable "content_library_destination" {
   type    = string
-  default = "vcenter.int.sentania.net"
+  default = "vcf-lab-vcenter-mgmt.int.sentania.net"
 }
 
 variable "library_vm_destroy" {

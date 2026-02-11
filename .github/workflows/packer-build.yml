@@ -27,7 +27,7 @@ jobs:
         working-directory: ubuntu
         env:
           VCENTER_USERNAME: ${{ vars.VCENTER_USERNAME }}
-          VCENTER_PASSWORD: ${{ secrets.VCENTER_PASSWORD }}
+          VCENTER_PASSWORD: ${{ secrets.SERVICEACCOUNTUSERNAME }}
           VCENTER_SERVER: ${{ vars.VCENTER_SERVER }}
         run: |
           packer build -force \
