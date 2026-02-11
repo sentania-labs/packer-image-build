@@ -1,6 +1,6 @@
 
 # vsphere datacenter name
-vsphere_datacenter      = "vcf-lab-mgmt-cl01"
+vsphere_datacenter      = "vcf-lab-mgmt-dc01"
 
 # name or IP of the ESXi host
 vsphere_host            = "vcf-lab-mgmt-esx04.int.sentania.net"
