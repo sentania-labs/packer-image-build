@@ -3,13 +3,13 @@
 vsphere_datacenter      = "vcf-lab-mgmt-dc01"
 
 # name or IP of the ESXi host
-vsphere_host            = "vcf-lab-mgmt-esx04.int.sentania.net"
+vsphere_cluster            = "vcf-lab-mgmt-cl01"
 
 # vsphere network
 vsphere_network         = "mgmt vm"
 
 # vsphere datastore
-vsphere_datastore       = "vcf-lab-mgmt-esx04-local"
+vsphere_datastore       = "vcf-lab-mgmt-cl01-vsan"
 
 # cloud_init files for unattended configuration for Ubuntu
 cloudinit_userdata      = "./http/user-data"

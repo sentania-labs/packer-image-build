@@ -10,7 +10,7 @@ packer {
 source "vsphere-iso" "ubuntu22" {
 
   vcenter_server        = var.vsphere_server
-  host                  = var.vsphere_host 
+  cluster                  = var.vsphere_cluster 
   username              = var.vsphere_username
   password              = var.vsphere_password
   insecure_connection   = "true"
@@ -69,7 +69,7 @@ source "vsphere-iso" "ubuntu22" {
 source "vsphere-iso" "ubuntu24" {
 
   vcenter_server        = var.vsphere_server
-  host                  = var.vsphere_host 
+  cluster                  = var.vsphere_cluster 
   username              = var.vsphere_username
   password              = var.vsphere_password
   insecure_connection   = "true"
