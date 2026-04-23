@@ -50,6 +50,14 @@ packer-image-build/
 4. **Credentials never in code.** Sensitive values (`vsphere_password`, `ssh_password`, API tokens) go in `.pkrvars.hcl` files that are gitignored. Never commit secrets.
 5. **`insecure_connection = true` is temporary.** The internal CA cert is in `files/` — the long-term intent is proper TLS verification. Don't remove the CA cert file.
 
+## Workflow
+
+Push direct to `main`. No PR flow, no feature branches.
+
+Build failure is the validation gate — if a build fails, fix the template, commit, and rebuild. Don't stage changes behind branches waiting for a clean run. Iteration is the process.
+
+Same pattern as vcf-content-factory's rapid-build phase: the repo is a personal tool, not a shared codebase. Velocity over ceremony.
+
 ## Development Guidelines
 
 - Terse commits. Describe what changed in the build, not philosophy.
