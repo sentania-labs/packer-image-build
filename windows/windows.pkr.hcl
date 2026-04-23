@@ -39,7 +39,10 @@ source "vsphere-iso" "windows2025-bare" {
   guest_os_type        = "windows2019srv_64Guest"
   disk_controller_type = ["pvscsi"]
 
-  iso_paths       = local.iso_paths
+  iso_paths = [
+    "${var.content_library_destination}/server2025-remastered/${var.windows_remastered_iso_filename}",
+    var.windows_tools_iso_path,
+  ]
   reattach_cdroms = 2
   remove_cdrom    = "true"
 

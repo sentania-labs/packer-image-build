@@ -1,6 +1,6 @@
 # Windows Build Notes
 
-## 2026-04-23 — CURRENT BLOCKER: "Press any key to boot from CD or DVD..." prompt times out, drops to Boot Manager
+## 2026-04-23 — RESOLVED 2026-04-23: "Press any key to boot from CD or DVD..." prompt times out, drops to Boot Manager
 
 **Symptom:** After Packer boots the VM, the EFI firmware tries the CDROM first (boot order is fine) and displays the standard Windows "Press any key to boot from CD or DVD..." prompt. No keypress is sent in time → prompt times out → EFI drops to the Boot Manager with "Boot normally" highlighted. Installer never launches.
 
@@ -31,7 +31,9 @@ When Scott manually selected the CDROM from the Boot Manager the second time aro
 3. **Shorten VMX boot delay** *(minor assist only)*
    Reduce any VMX-level POST/boot delay so the prompt appears sooner, giving option 2 more headroom. Not a fix on its own.
 
-**Status:** Open — remaster complete, awaiting Scott's upload and content library item name.
+**Status:** RESOLVED. windows2025-bare retargeted to content library item server2025-remastered (remastered ISO with efisys_noprompt.bin, no press-any-key prompt). Commit: <this commit hash>.
+
+**windows2025-cbinit variant is parked** — not being actively built. Source block retained in windows.pkr.hcl but cbinit is out of scope for the current build sprint.
 
 **CI runs cancelled 2026-04-23:** Three in-progress/queued workflow runs (24835472648, 24836511704, 24836608259) cancelled manually — none would have progressed past this stall.
 
@@ -40,8 +42,6 @@ When Scott manually selected the CDROM from the Boot Manager the second time aro
 ---
 
 ## 2026-04-23 — Win2025: vmxnet3 driver missing from install media
-
-> **Note:** Blocked by EFI boot issue above — this won't be hit until the installer actually runs.
 
 **Symptom:** Win2025 builds fail or hang at Packer's IP-wait step. The VM installs but never acquires an IP address.
 

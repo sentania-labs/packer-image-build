@@ -81,6 +81,12 @@ variable "windows_iso_path" {
   default     = "server2025-iso/file.iso"
 }
 
+variable "windows_remastered_iso_filename" {
+  type        = string
+  description = "Filename of the remastered Win2025 ISO inside the server2025-remastered content library item."
+  default     = ""
+}
+
 variable "windows_tools_iso_path" {
   type        = string
   description = "Full datastore path to the VMware Tools ISO served by every ESXi host."

@@ -8,8 +8,9 @@ winrm_password = "VMware123!VMware123!"
 
 # ISO inside vcf-lab-mgmt-contentlibrary, library item "server2025-iso";
 # actual filename is 26100.1742.240906-0331.ge_release_svc_refresh_SERVER_EVAL_x64FRE_en-us.iso.
-windows_iso_path       = "server2025-iso/26100.1742.240906-0331.ge_release_svc_refresh_SERVER_EVAL_x64FRE_en-us.iso"
-windows_tools_iso_path = "[] /vmimages/tools-isoimages/windows.iso"
+windows_iso_path                = "server2025-iso/26100.1742.240906-0331.ge_release_svc_refresh_SERVER_EVAL_x64FRE_en-us.iso"
+windows_remastered_iso_filename = "server2025-remastered.iso"
+windows_tools_iso_path          = "[] /vmimages/tools-isoimages/windows.iso"
 
 # Server 2025 Standard Desktop Experience (Microsoft-published GVLK).
 windows_product_key = "TVRH6-WHNXV-R9WG3-9XRFY-MY832"
